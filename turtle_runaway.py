@@ -61,7 +61,7 @@ class RunawayGame:
 
         # TODO) You can do something here and follows.
         #myturtle은 플레이어를 추적함
-        if random.randint(0,3) == 0:
+        if random.randint(0,2) == 0:
             angle = self.myturtle.towards(self.runner.pos())
             self.myturtle.setheading(angle)
             self.myturtle.forward(self.myturtle.step_move)
