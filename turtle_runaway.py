@@ -81,10 +81,12 @@ class RunawayGame:
         
         timer = int(time.time()-self.timer)
        
-        #시간이 지날수록 난이도 증가(자신의 거북이가 느려짐)
+        #시간이 지날수록 난이도 증가
         if timer%5 == 0:
             if self.runner.step_move>2:
                 self.runner.step_move -= 0.5
+            if self.myturtle.step_move<10:
+                self.myturtle.step_move += 0.5
             self.level += 1
         
         #난이도가 오르면 점수 증가폭 상승
